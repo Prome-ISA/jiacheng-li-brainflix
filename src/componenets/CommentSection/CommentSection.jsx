@@ -1,22 +1,24 @@
 import "./CommentSection.scss";
 import formatDate from "../../utilities/formatDate.js";
+import commentIcon from "../../assets/Icons/add_comment.svg"
 
-function CommentSection ({videoInfo}) {
+function CommentSection({ videoInfo }) {
 
-    const comments  = videoInfo.comments
-    const timestamp = videoInfo.timestamp
+  const comments = videoInfo.comments
+  const timestamp = videoInfo.timestamp
 
-    return (
-        <div className="comment-section">
-        <p>{comments.length} Comments</p>
-        <form>
-        <label>JOIN THE COVERSATION: 
-             <textarea name="comment" placeholder="Add a new comment" disabled></textarea>
+  return (
+    <div className="commentSection">
+      <p>{comments.length} Comments</p>
+      <form>
+        <label>JOIN THE CONVERSATION:
+          <textarea name="comment" placeholder="Add a new comment" ></textarea>
         </label>
-         
-          <button type="submit" disabled>COMMENT</button>
-        </form>
-        <ul>
+        <button type="submit" >
+          <img src={commentIcon} alt="Comment Icon" /> COMMENT
+        </button>
+      </form>
+      <ul>
         {comments.map(comment => (
           <li key={comment.id}>
             <strong>{comment.name}</strong>: {comment.comment}
@@ -24,8 +26,8 @@ function CommentSection ({videoInfo}) {
           </li>
         ))}
       </ul>
-          </div> 
-    )
+    </div>
+  )
 
 }
 

@@ -3,6 +3,7 @@ import "./App.scss";
 import { useState } from 'react';
 // import videos from "./data/videos.json"
 
+import Navbar from "./componenets/NavBar/NavBar.jsx";
 
 import videoInfo from "./data/video-details.json"
 import VideoDetails from "./componenets/VideoDetails/VideoDetails.jsx"
@@ -27,6 +28,7 @@ function App() {
     
 
     <main className="app">
+      <Navbar/>
       <VideoPlayer videoInfo={activeVideoInfo}/>
       <VideoDetails videoInfo={activeVideoInfo}  />
       <CommentSection videoInfo={activeVideoInfo}/>
