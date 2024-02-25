@@ -1,13 +1,13 @@
-
+import "./VideoPlayer.scss"
 
 function VideoPlayer({ videoInfo }) {
 
-
+    const {video, image} = videoInfo
 
     return (
 
-        <video className="videoPlayer"  controls>
-            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+        <video className="videoPlayer"  controls poster={image}>
+            <source src={video}   type="video/mp4" />
         </video>
     )
 
