@@ -19,7 +19,7 @@ function CommentSection({ videoInfo }) {
         </button>
       </form>
       <ul className="commentList">
-        {comments.map(comment => (
+        {comments.map(comment => (          
           <li className="commentListItem" key={comment.id}>
 
             <div className="commentListItem__nameAndTimestamp">
