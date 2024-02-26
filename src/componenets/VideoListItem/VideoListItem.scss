@@ -1,0 +1,27 @@
+.videoListItem {
+    margin: 1rem;
+    margin-bottom: 1rem;
+    
+    width: 100%;
+    align-items: center;
+  
+
+    display: flex;
+    flex-direction: row;
+
+    &__img{
+        max-height: 7rem;
+        border-radius: 4px;
+    }
+
+    &__titleAndChannel{
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        &--title {
+            font-weight: bold;
+        }
+
+    }
+}

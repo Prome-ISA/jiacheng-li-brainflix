@@ -9,20 +9,29 @@ function CommentSection({ videoInfo }) {
 
   return (
     <div className="commentSection">
-      <p>{comments.length} Comments</p>
-      <form>
-        <label>JOIN THE CONVERSATION:
-          <textarea name="comment" placeholder="Add a new comment" ></textarea>
+      <p className="commentSection__count">{comments.length} Comments</p>
+      <form className="commentSection__input">
+        <label className="commentSection__input--label">JOIN THE CONVERSATION:
+          <textarea className="commentSection__input--text" placeholder="Add a new comment" ></textarea>
         </label>
-        <button type="submit" >
+        <button className="commentSection__input--button" type="submit" >
           <img src={commentIcon} alt="Comment Icon" /> COMMENT
         </button>
       </form>
-      <ul>
+      <ul className="commentList">
         {comments.map(comment => (
-          <li key={comment.id}>
-            <strong>{comment.name}</strong>: {comment.comment}
-            <div> {formatDate(timestamp)}</div>
+          <li className="commentListItem" key={comment.id}>
+
+            <div className="commentListItem__nameAndTimestamp">
+
+
+              <div className="commentListItem__nameAndTimestamp--name">{comment.name} </div>
+              <div className="commentListItem__nameAndTimestamp--timestamp">{formatDate(timestamp)}</div>
+
+
+            </div>
+
+            {comment.comment}
           </li>
         ))}
       </ul>

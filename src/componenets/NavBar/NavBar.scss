@@ -1,33 +1,52 @@
+@import '../../styles/partials/minxins';
+
+
+// @mixin button-bg($bg) {
+//     background: $bg;
+
+//     &:hover {
+//         background: darken($bg, 8%);
+//         transition: all 0.3s ease;
+//     }
+
+//     &:active {
+//         background: darken($bg, 25%);
+//     }
+// }
+
 .navbar {
     display: flex;
     width: 100%;
     align-items: center;
     flex-direction: column;
-    
-    
-    padding: 5px;
-    
-    &__logo{
-        height: auto;
-    }
-    
-    &__mobileUserIcon {
-        width: 5rem;
-        border-radius: 50%;
+
+
+
+
+
+    &__logo {
+        height: 25px;
+        max-width: 120px;
     }
 
-    &__nonMobileUserIcon {
-        width: 5rem;
-        border-radius: 50%;
-        
-    }
-
-    &__searchBarAndMobileIcon{
+    &__searchBarAndMobileIcon {
         display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: center;
     }
+
+    &__mobileUserIcon {
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 3.125rem;
+
+
+    }
+
+
+
+
 
     &__searchBar {
         display: flex;
@@ -35,21 +54,39 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 5px;
+        height: 3rem;
 
-         input {
-            flex: 1;
+
+        input {
+
             border: none;
             outline: none;
         }
 
         img {
-            width: 20px; 
-            height: 20px; 
-            
+            width: 20px;
+            height: 20px;
+
         }
     }
-    
-   
-    
+
+    &__nonMobileUserIcon {
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 3.125rem;
+
+    }
+
+    &__uploadButton {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 0.5rem;
+        border-radius: 3px;
+        font-size: 2rem;
+        @include button-bg(#3498db);
+    }
+
+
+
 
 }

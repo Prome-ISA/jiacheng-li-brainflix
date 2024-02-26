@@ -19,11 +19,11 @@ function Navbar() {
             </div>
 
 
-            <button type="submit" >
+            <button type="submit" className="navbar__uploadButton" >
                 <img src={uploadIcon} alt="Upload Icon" /> UPLOAD
             </button>
-
-            <img className="navbar__nonMobileUserIcon" src={userImage} alt="userIcon non-mobile" />
+            {/* <img className="navbar__nonMobileUserIcon" src={userImage} alt="userIcon non-mobile" />*/}
+            
 
 
 

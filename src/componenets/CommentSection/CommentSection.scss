@@ -1,0 +1,66 @@
+@import '../../styles/partials/minxins';
+
+
+.commentList{
+    // display: flex;
+
+    list-style: none;
+    padding-left: 0;
+     ;
+}
+
+.commentSection {
+
+    margin: 1rem;
+    
+    &__count {
+        font-weight: bold;
+    }
+
+    &__input{
+        display: flex;
+        flex-direction: column;
+
+        &--label{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--text{
+            width: 100%
+        }
+
+        &--button{
+            color: white;
+        text-decoration: none;
+        padding: 0.5rem 0.5rem;
+        border-radius: 3px;
+        font-size: 2rem;
+        @include button-bg(#3498db);
+        }
+
+    }
+}
+
+.commentListItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    &__nameAndTimestamp{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &--name{
+            font-weight: bold;
+
+        }
+        
+        &--timestamp{
+            color: #afafaf
+
+        }
+    }
+}

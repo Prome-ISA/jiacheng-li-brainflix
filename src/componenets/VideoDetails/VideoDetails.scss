@@ -1,6 +1,29 @@
 .video-details{
+    display: flex;
+    flex-direction: column;
     
     margin: 1rem;
-    max-width: 50rem
+
+    &__title {
+        border-bottom: 1px;
+        border-color: black;
+    }
+    &__data{
+        border-bottom: 1px;
+        border-color: black;
+
+       display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &--channel{
+            font-weight: bold;
+        }
+
+        &--datatext{
+            color: #afafaf
+        }
+    }
+    
    
 }

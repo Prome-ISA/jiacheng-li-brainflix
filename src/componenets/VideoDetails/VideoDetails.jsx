@@ -14,16 +14,21 @@ function VideoDetails({ videoInfo }) {
     return (
         <section className='video-details'>
 
-            <h1>{title}</h1>
-            <section>
-                <div>By {channel}</div>
-                <div>{formatDate(timestamp)}</div>
-                <div>
-                    <img src={viewsIcon} alt="viewsIcon"/>{views}
+            <h1 className="video-details__title">{title}</h1>
+            <section className="video-details__data">
+                <div className="video-details__data--channelAndTimestamp">
+                    <div className="video-details__data--channel">By {channel}</div>
+                    <div className="video-details__data--datatext">{formatDate(timestamp)}</div>
                 </div>
+
                 <div>
-                    <img src={likesIcon} alt="likeIcon"/>
-                    Likes:{likes}
+                    <div className="video-details__data--datatext">
+                        <img src={viewsIcon} alt="viewsIcon" />{" "+ views}
+                    </div>
+                    <div className="video-details__data--datatext">
+                        <img src={likesIcon} alt="likeIcon" />
+                         {" "+likes}
+                    </div>
                 </div>
             </section>
 
