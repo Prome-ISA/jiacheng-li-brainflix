@@ -3,13 +3,14 @@ import formatDate from "../../utilities/formatDate.js";
 import commentIcon from "../../assets/Icons/add_comment.svg"
 
 function CommentSection({ videoInfo }) {
+  console.log(videoInfo)
 
-  const comments = videoInfo.comments
-  const timestamp = videoInfo.timestamp
+  // const comments = videoInfo.comments
+  // const timestamp = videoInfo.timestamp
 
   return (
     <div className="commentSection">
-      <p className="commentSection__count">{comments.length} Comments</p>
+      <p className="commentSection__count">{videoInfo.comments.length} Comments</p>
       <form className="commentSection__input">
         <label className="commentSection__input--label">JOIN THE CONVERSATION:
           <textarea className="commentSection__input--text" placeholder="Add a new comment" ></textarea>
@@ -19,14 +20,14 @@ function CommentSection({ videoInfo }) {
         </button>
       </form>
       <ul className="commentList">
-        {comments.map(comment => (          
+        {videoInfo.comments.map(comment => (          
           <li className="commentListItem" key={comment.id}>
 
             <div className="commentListItem__nameAndTimestamp">
 
 
               <div className="commentListItem__nameAndTimestamp--name">{comment.name} </div>
-              <div className="commentListItem__nameAndTimestamp--timestamp">{formatDate(timestamp)}</div>
+              <div className="commentListItem__nameAndTimestamp--timestamp">{formatDate(videoInfo.timestamp)}</div>
 
 
             </div>

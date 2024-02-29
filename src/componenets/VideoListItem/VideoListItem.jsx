@@ -1,6 +1,6 @@
 import "./VideoListItem.scss"
 
-function VideoListItem({ video, isActive, updateActiveVideo }) {
+function VideoListItem({ video, isActive, updateActiveVideoInfo }) {
 
     const { title, id, image, channel } = video;
 
@@ -13,7 +13,7 @@ function VideoListItem({ video, isActive, updateActiveVideo }) {
     }
 
     const handleClick = () => {
-        updateActiveVideo({ id })
+        updateActiveVideoInfo( id )
     }
 
 

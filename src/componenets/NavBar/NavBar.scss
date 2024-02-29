@@ -34,12 +34,14 @@
         flex-direction: row;
         width: 100%;
         justify-content: center;
+        align-items: center;
     }
 
     &__mobileUserIcon {
         width: 3.125rem;
         height: 3.125rem;
         border-radius: 3.125rem;
+        margin: 0rem 1rem;
 
 
     }
@@ -55,6 +57,8 @@
         border-radius: 5px;
         padding: 5px;
         height: 3rem;
+        width: 100%;
+        margin-left: 1rem;
 
 
         input {
@@ -74,6 +78,7 @@
         width: 3.125rem;
         height: 3.125rem;
         border-radius: 3.125rem;
+        
 
     }
 
@@ -84,6 +89,8 @@
         border-radius: 3px;
         font-size: 2rem;
         @include button-bg(#3498db);
+        width: calc(100% - 2rem);
+        margin: 1rem;
     }
 
 

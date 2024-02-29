@@ -1,17 +1,17 @@
 import VideoListItem from "../VideoListItem/VideoListItem";
 import  "./VideoList.scss"
 
-function VideoList({ videoInfo, activeVideoInfo, updateActiveVideoInfo }) {
+function VideoList({ videos, activeVideoInfo, updateActiveVideoInfo }) {
 
-   const {  id  } = videoInfo
-   console.log(videoInfo)
+   const {  id  } = videos
+  
 
     return (
         <ul className="videoList" >
         
-        {videoInfo.map((video) => (
+        {videos.map((video) => (
             <VideoListItem
-                key={id}
+                key={video.id}
                 video={video}
                 isActive={id === activeVideoInfo.id}
                 updateActiveVideoInfo={updateActiveVideoInfo}

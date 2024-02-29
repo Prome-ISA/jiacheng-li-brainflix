@@ -2,12 +2,12 @@
 import "./App.scss";
 import { useState } from 'react';
 
-// import videos from "./data/videos.json"
-import videoInfo from "./data/video-details.json"
+import videos from "./data/videos.json"
+import videoInfo from "./data/video-details.json";
 
 import Navbar from "./componenets/NavBar/NavBar.jsx";
 import VideoPlayer from "./componenets/VideoPlayer/VideoPlayer.jsx";
-import VideoDetails from "./componenets/VideoDetails/VideoDetails.jsx"
+import VideoDetails from "./componenets/VideoDetails/VideoDetails.jsx";
 import CommentSection from "./componenets/CommentSection/CommentSection.jsx";
 import VideoList from "./componenets/VideoList/VideoList.jsx";
 
@@ -42,7 +42,7 @@ function App() {
       {/**/} 
 
       <VideoList 
-        videoInfo={videoInfo} 
+        videos={videos} 
         activeVideoInfo={activeVideoInfo} 
         updateActiveVideoInfo={updateActiveVideoInfo}
       />
