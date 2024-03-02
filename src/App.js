@@ -1,6 +1,7 @@
 
 import "./App.scss";
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import videos from "./data/videos.json"
 import videoInfo from "./data/video-details.json";
@@ -11,49 +12,41 @@ import VideoDetails from "./componenets/VideoDetails/VideoDetails.jsx";
 import CommentSection from "./componenets/CommentSection/CommentSection.jsx";
 import VideoList from "./componenets/VideoList/VideoList.jsx";
 
+import HomePage from "./pages/Home/Home.jsx";
+import UploadPage from "./pages/UploadPage/UploadPage.jsx";
+import FindVideoPage from "./pages/FindVideoPage/FindVideoPage.jsx";
+
 
 
 function App() {
 
   const [activeVideoInfo, setActiveVideoInfo] = useState(videoInfo[0]);
-  {/*const [activeVideo, setActiveVideo] = useState(videos[0]);*/}
-  
+  {/*const [activeVideo, setActiveVideo] = useState(videos[0]);*/ }
+
 
   function updateActiveVideoInfo(clickVideoID) {
-    {/*const newActiveVideo = videos.find((video) => video.id === clickVideoID)*/}
+    {/*const newActiveVideo = videos.find((video) => video.id === clickVideoID)*/ }
     const newActiveVideoInfo = videoInfo.find((videoInfo) => videoInfo.id === clickVideoID)
-    
-    {/*setActiveVideo(newActiveVideo)*/} 
-    
+
+    {/*setActiveVideo(newActiveVideo)*/ }
+
     setActiveVideoInfo(newActiveVideoInfo)
   }
- 
-
-
 
   return (
-    
 
-    <main className="app">
-      <Navbar/>
-      <VideoPlayer videoInfo={activeVideoInfo}/> 
-      <VideoDetails videoInfo={activeVideoInfo}  /> 
-      <CommentSection videoInfo={activeVideoInfo}/> 
-      {/**/} 
+    <BrowserRouter>
 
-      <VideoList 
-        videos={videos} 
-        activeVideoInfo={activeVideoInfo} 
-        updateActiveVideoInfo={updateActiveVideoInfo}
-      />
+      <Navbar />
 
-      
-      
-      
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/videos/:id" element={<HomePage />} /> //useprarm
 
+      </Routes>
 
-    </main>
-
+    </BrowserRouter>
 
   );
 }

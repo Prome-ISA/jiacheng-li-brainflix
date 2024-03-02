@@ -3,7 +3,7 @@ import formatDate from "../../utilities/formatDate.js";
 import commentIcon from "../../assets/Icons/add_comment.svg"
 
 function CommentSection({ videoInfo }) {
-  console.log(videoInfo)
+
 
   // const comments = videoInfo.comments
   // const timestamp = videoInfo.timestamp

@@ -1,5 +1,8 @@
 import "./NavBar.scss"
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import brainflixLogo from "../../assets/Logo/BrainFlix-logo.svg"
 import searchIcon from "../../assets/Icons/search.svg"
 import uploadIcon from "../../assets/Icons/upload.svg"
@@ -18,12 +21,13 @@ function Navbar() {
                 <img className="navbar__mobileUserIcon" src={userImage} alt="userIcon mobile" />
             </div>
 
-
-            <button type="submit" className="navbar__uploadButton" >
+            <Link to="/upload" className="navbar__uploadButton">
                 <img src={uploadIcon} alt="Upload Icon" /> UPLOAD
-            </button>
-            {/* <img className="navbar__nonMobileUserIcon" src={userImage} alt="userIcon non-mobile" />*/}
+            </Link>
             
+            
+            {/* <img className="navbar__nonMobileUserIcon" src={userImage} alt="userIcon non-mobile" />*/}
+
 
 
 
