@@ -14,7 +14,7 @@ import VideoList from "./componenets/VideoList/VideoList.jsx";
 
 import HomePage from "./pages/Home/Home.jsx";
 import UploadPage from "./pages/UploadPage/UploadPage.jsx";
-import FindVideoPage from "./pages/FindVideoPage/FindVideoPage.jsx";
+
 
 
 

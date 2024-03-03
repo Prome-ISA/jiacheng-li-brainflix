@@ -1,27 +1,54 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import videos from "../../data/videos.json"
-import videoInfo from "../../data/video-details.json";
-
-import Navbar from "../../componenets/NavBar/NavBar.jsx";
-import VideoPlayer from "../../componenets/VideoPlayer/VideoPlayer.jsx";
-import VideoDetails from "../../componenets/VideoDetails/VideoDetails.jsx";
-import CommentSection from "../../componenets/CommentSection/CommentSection.jsx";
-import VideoList from "../../componenets/VideoList/VideoList.jsx";
 
 
 
-function UploadPage(){
+function UploadPage() {
+
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setSubmitted(true);
+    };
+
+  
+    if (!submitted) {
+        return (
+            <div className="video-upload-page">
+                <h1> Upload Videos </h1>
+                <p> Video Thumbnail</p>
+                <img src='../../assets/Images/Upload-video-preview.jpg'/>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="image">Video Thumbnail</label>
+                    <img src="../../assets/Images/Upload-video-preview.jpg"/>
+                    <input type="file" id="image" name="image" accept="image/*" required />
+
+                    <button type="submit">submit</button>
+                    <button >Cancel</button>
+                </form>
 
 
-    return(
-        <h2>Upload  Page</h2>
 
-    )
-    
-    
-    
-}
+            </div>
+        );
+    } else {
+        setTimeout(() => {
+            window.location.href = '/'; //  to home page
+        }, 2000);
+
+        return (
+            <div className="video-upload-page">
+                <h1>Video Upload Page</h1>
+                <div className="notification">
+                    Upload successful! Redirecting to home page...
+                </div>
+            </div>
+        );
+    }
+};
+
+
+
+
 
 export default UploadPage
