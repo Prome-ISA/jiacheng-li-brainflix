@@ -38,7 +38,7 @@ function VideoListItem({ video, isActive, updateActiveVideoInfo }) {
 
     return (
 
-        <li onClick={handleClick} className={className}>
+        <li className={className}>
             <Link to={`/videos/${id}`}> 
             
             <img className="videoListItem__img" src={video.image} alt={video.title} />

@@ -14,7 +14,7 @@ const UploadPage = () => {
 
   const handleCancel = () => {
     // Handle cancellation here, for example, navigate back to the previous page
-    window.history.back();
+    window.history.back();   /// useHistory from react router
   };
 
   // JSX for Video Upload Page
@@ -71,7 +71,7 @@ const UploadPage = () => {
     
     setTimeout(() => {
      
-      window.location.href = '/'; 
+      window.location.href = '/'; ////useNavigate instead
     }, 2000);
 
     return (
