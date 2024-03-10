@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+.navbar__logo {
+  height: 25px;
+  max-width: 120px;
+  padding: 1rem;
+}
+.navbar__searchBarAndMobileIcon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__mobileUserIcon {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 3.125rem;
+  margin: 0rem 1rem;
+}
+.navbar__searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  height: 3rem;
+  width: 100%;
+  margin-left: 1rem;
+}
+.navbar__searchBar input {
+  border: none;
+  outline: none;
+}
+.navbar__searchBar img {
+  width: 20px;
+  height: 20px;
+}
+.navbar__nonMobileUserIcon {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 3.125rem;
+}
+.navbar__uploadButton {
+  color: white;
+  text-decoration: none;
+  padding: 0;
+  border-radius: 3px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3498db;
+  width: calc(100% - 2rem);
+  margin: 1rem;
+}
+.navbar__uploadButton:hover {
+  background: #2383c4;
+  transition: all 0.3s ease;
+}
+.navbar__uploadButton:active {
+  background: #16527a;
+}/*# sourceMappingURL=NavBar.css.map */

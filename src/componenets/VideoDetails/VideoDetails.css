@@ -1,0 +1,22 @@
+.video-details {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.video-details__title {
+  border-bottom: 1px;
+  border-color: black;
+}
+.video-details__data {
+  border-bottom: 1px;
+  border-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.video-details__data--channel {
+  font-weight: bold;
+}
+.video-details__data--datatext {
+  color: #afafaf;
+}/*# sourceMappingURL=VideoDetails.css.map */

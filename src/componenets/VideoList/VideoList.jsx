@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+
 import VideoListItem from "../VideoListItem/VideoListItem";
 import  "./VideoList.scss"
-import axios from "axios";
+
 
 
 
@@ -12,7 +12,7 @@ function VideoList({ videos, activeVideoInfo, updateActiveVideoInfo }) {
 
 
     console.log(videos);
-   const {  id  } = videos;
+//    const {  id  } = videos;
    
 
     return (
