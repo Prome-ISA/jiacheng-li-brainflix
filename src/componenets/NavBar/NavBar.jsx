@@ -1,6 +1,5 @@
 import "./NavBar.scss"
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import brainflixLogo from "../../assets/Logo/BrainFlix-logo.svg"
@@ -11,7 +10,10 @@ import userImage from "../../assets//Images/Mohan-muruge.jpg"
 function Navbar() {
     return (
         <header className="navbar">
-            <img className="navbar__logo" src={brainflixLogo} alt="BrainFlix" />
+        <Link to="/">
+        <img className="navbar__logo" src={brainflixLogo} alt="BrainFlix" />
+        </Link>
+            
             <div className="navbar__searchBarAndMobileIcon">
                 <div className="navbar__searchBar">
                     <img src={searchIcon} alt="Search Icon" />
