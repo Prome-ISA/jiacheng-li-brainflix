@@ -2,8 +2,6 @@ import "./VideoPlayer.scss"
 
 function VideoPlayer({ videoInfo }) {
     
-    // const {video, image} = videoInfo
-    
 
     return (
 

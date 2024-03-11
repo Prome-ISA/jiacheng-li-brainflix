@@ -11,10 +11,7 @@ import VideoDetails from "../../componenets/VideoDetails/VideoDetails.jsx";
 import CommentSection from "../../componenets/CommentSection/CommentSection.jsx";
 import VideoList from "../../componenets/VideoList/VideoList.jsx";
 
-const API_URL = "http://localhost:8080";
-
-
-// const API_KEY = "?api_key=f9e031c2-65ee-405b-a5a7-16337ca7063b"
+// const API_URL = "http://localhost:8080";
 
 
 function HomePage() {

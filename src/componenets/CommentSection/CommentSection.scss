@@ -1,68 +1,128 @@
 @import '../../styles/partials/minxins';
 
 
-.commentList{
-    // display: flex;
+.commentList {
 
     list-style: none;
     padding-left: 0;
-     ;
+    ;
+}
+
+.post-comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
 }
 
 .commentSection {
 
     margin: 1rem;
-    
+
     &__count {
         font-weight: bold;
+        font-size: 13px;
+        line-height: 20px;
     }
 
-    &__input{
+    &__input {
+        flex: 1; // Allow the text to take up remaining space
         display: flex;
         flex-direction: column;
+        align-items: stretch;
+        justify-content: space-evenly;
+        
 
-        &--label{
+        justify-content: center &--label {
             display: flex;
             flex-direction: column;
+            color: #afafaf;
+            font-weight: 700;
         }
 
-        &--text{
-            width: 100%
+        @include breakpoint(tablet){
+            flex-direction: row;
+            align-items: center;
+            
         }
 
-        &--button{
+        &--text {
+            width: 100%;
+            height: 3rem;
+            margin-bottom: 1rem;
+            background-color: #fafafa;
+
+        }
+
+        &--label{
+            color: #afafaf;
+
+        }
+
+        &--button {
             color: white;
-        text-decoration: none;
-        padding: 0.5rem 0.5rem;
-        border-radius: 3px;
-        font-size: 2rem;
-        @include button-bg(#3498db);
+            text-decoration: none;
+            padding: 0.5rem 0.5rem;
+            border-radius: 3px;
+            font-size: 1rem;
+            min-width: 150px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+
+            @include button-bg(#0095ff);
         }
 
     }
 }
 
+.comment-icon {
+    width: 36px; // Adjust the size of the icon as needed
+    height: 36px; // Adjust the size of the icon as needed
+    border-radius: 50%; // Make the icon round
+    margin-right: 10px; // Add some space between the icon and other elements
+
+    @include breakpoint(tablet) {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
 .commentListItem {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+
     margin-bottom: 1rem;
     border-bottom: 1px solid #afafaf;
     padding-bottom: 1rem;
 
-    &__nameAndTimestamp{
+    &__body {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+    }
 
-        &--name{
+    &__nameAndTimestamp {
+        flex: 1; // Allow the text to take up remaining space
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // Vertically center the text
+
+        @include breakpoint(tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        &--name {
             font-weight: bold;
 
         }
-        
-        &--timestamp{
-            color: #afafaf
 
+        &--timestamp {
+            color: #afafaf
         }
     }
 }

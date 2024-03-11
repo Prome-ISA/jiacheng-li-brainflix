@@ -4,7 +4,8 @@ import "./VideoListItem.scss"
 
 function VideoListItem({ video, isActive, updateActiveVideoInfo }) {
 
-    const { title, id, image, channel } = video;
+    const { id } = video;
+    // const { title, id, image, channel } = video;
 
 
 
@@ -13,15 +14,15 @@ function VideoListItem({ video, isActive, updateActiveVideoInfo }) {
         className += " videoListItem--selected"
     }
 
-    const handleClick = () => {
-        updateActiveVideoInfo( id )
-    }
+    // const handleClick = () => {
+    //     updateActiveVideoInfo( id )
+    // }
 
 
     return (
 
-        <li className={className}>
-            <Link to={`/videos/${id}`}> 
+        <li >
+            <Link className={className} to={`/videos/${id}`}> 
             
             <img className="videoListItem__img" src={video.image} alt={video.title} />
             <div className="videoListItem__titleAndChannel">

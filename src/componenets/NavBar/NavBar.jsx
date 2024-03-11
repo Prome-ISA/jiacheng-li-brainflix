@@ -26,9 +26,10 @@ function Navbar() {
             <Link to="/upload" className="navbar__uploadButton">
                 <img src={uploadIcon} alt="Upload Icon" /> UPLOAD
             </Link>
+            <img className="navbar__nonMobileUserIcon" src={userImage} alt="userIcon non-mobile" />
             
             
-            {/* <img className="navbar__nonMobileUserIcon" src={userImage} alt="userIcon non-mobile" />*/}
+            {/* */}
 
 
 

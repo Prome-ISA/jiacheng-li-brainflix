@@ -17,6 +17,7 @@ function VideoList({ videos, activeVideoInfo, updateActiveVideoInfo }) {
 
     return (
         <ul className="videoList" >
+        <p className="next-videos"> NEXT VIDEOS</p>
         
         {videos.filter(video =>video.id !== activeVideoInfo?.id).map((video) => (
             <VideoListItem

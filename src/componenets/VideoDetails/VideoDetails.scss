@@ -1,29 +1,76 @@
-.video-details{
+@import '../../styles/partials/minxins';
+
+
+.video-details {
     display: flex;
     flex-direction: column;
-    
+
     margin: 1rem;
 
     &__title {
+        font-size: 24px;
         border-bottom: 1px;
-        border-color: black;
+        border-color: rgb(0, 0, 0);
+        line-height: 32px;
+        font-weight: 700;
     }
-    &__data{
-        border-bottom: 1px;
-        border-color: black;
 
-       display: flex;
+    &__data {
+        
+        border-top: 1px;
+        border-color: black;
+        margin-bottom: 1rem;
+        display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
 
-        &--channel{
-            font-weight: bold;
+        @include breakpoint(tablet){
+            justify-content: space-between;
+
         }
 
-        &--datatext{
-            color: #afafaf
+        &--channelAndTimestamp{
+            display: flex;
+            flex-direction: column;
+            
+
+
+            @include breakpoint(tablet){
+                flex-direction: row;
+                align-items: center;
+            }
+            
+        }
+
+        &--channel {
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+           
+        }
+
+        &--stats{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include breakpoint(tablet){
+                flex-direction: row;
+            }
+
+
+
+        }
+
+        &--datatext {
+            color: #afafaf;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+            
         }
     }
-    
-   
+
+
 }
