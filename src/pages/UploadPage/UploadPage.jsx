@@ -23,7 +23,7 @@ const UploadPage = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          
+
         },
         body: JSON.stringify({ title, description, thumbnail }),
       });
@@ -49,29 +49,54 @@ const UploadPage = () => {
   if (!submitted) {
     return (
       <div className="video-upload-page">
+
         <h1 className="video-upload-page__title">Upload Video</h1>
+
         <form className="form-group" onSubmit={handleSubmit}>
-          <div>
-            <label className="form-group__thumbnail-title">Video Thumbnail:</label>
+
+          
+
+          <div className='upload-page-body'>
+
+          <div className='image-section'>
+            <p className="form-group__thumbnail-title">Video Thumbnail:</p>
             <img className="upload-preview" src={img} alt="upload preview" />
           </div>
-          <div className="form-group__title">
-            <label className="form-group__title__input--label">Title your video:
-              <input className="form-group__title__input--text" name="title" placeholder="Add a new comment" />
-            </label>
+
+          <div className='form-section'>
+            <div className="form-group__title">
+              <label className="form-group__title__input--label">Title your video:
+                <input className="form-group__title__input--text" name="title" placeholder="Add a title to your video" />
+              </label>
+            </div>
+
+            <div className="form-group__details">
+              <label className="form-group__title__input--label">ADD A VIDEO DESCRIPTION:
+                <textarea className="form-group__title__input--text" name="description" placeholder="Add a description to your video"></textarea>
+              </label>
+            </div>
           </div>
-          <div className="form-group__details">
-            <label className="form-group__title__input--label">ADD A VIDEO DESCRIPTION:
-              <textarea className="form-group__title__input--text" name="description" placeholder="Add a description to your video"></textarea>
-            </label>
+          
+          
           </div>
-          <div className="form-group__submit">
-            <img src={submitIcon} alt="submit icon" />
-            <button type="submit">Publish</button>
+
+          
+
+          <div className='buttons-section'>
+
+            <div className="form-group__submit">
+              <img src={submitIcon} alt="submit icon" />
+              <button type="submit">Publish</button>
+            </div>
+
+            <div className="form-group__cancel">
+              <button type="button" onClick={handleCancel}>Cancel</button>
+            </div>
+
           </div>
-          <div className="form-group__cancel">
-            <button type="button" onClick={handleCancel}>Cancel</button>
-          </div>
+
+
+
         </form>
       </div>
     );

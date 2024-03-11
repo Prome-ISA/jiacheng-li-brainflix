@@ -2,16 +2,12 @@ import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 
-// import videos from "../../data/videos.json"
-
-
 
 import VideoPlayer from "../../componenets/VideoPlayer/VideoPlayer.jsx";
 import VideoDetails from "../../componenets/VideoDetails/VideoDetails.jsx";
 import CommentSection from "../../componenets/CommentSection/CommentSection.jsx";
 import VideoList from "../../componenets/VideoList/VideoList.jsx";
 
-// const API_URL = "http://localhost:8080";
 
 
 function HomePage() {
@@ -70,7 +66,7 @@ function HomePage() {
 
       <VideoPlayer videoInfo={activeVideoInfo} />
 
-      <div className='body'>
+      <div className='home-body'>
 
         <div className='details-comments'>
           <VideoDetails videoInfo={activeVideoInfo} />
