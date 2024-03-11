@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 // import videos from "../../data/videos.json"
@@ -69,18 +69,27 @@ function HomePage() {
     <main className="app">
 
       <VideoPlayer videoInfo={activeVideoInfo} />
-      <VideoDetails videoInfo={activeVideoInfo} />
-      <CommentSection videoInfo={activeVideoInfo} />
-      <VideoList
-        videos={videos}
-        activeVideoInfo={activeVideoInfo}
-        updateActiveVideoInfo={updateActiveVideoInfo}
-      />
+
+      <div className='body'>
+
+        <div className='details-comments'>
+          <VideoDetails videoInfo={activeVideoInfo} />
+          <CommentSection videoInfo={activeVideoInfo} />
+        </div>
+
+        <div className='video-list'>
+          <VideoList
+            videos={videos}
+            activeVideoInfo={activeVideoInfo}
+            updateActiveVideoInfo={updateActiveVideoInfo}
+          />
+        </div>
+
+      </div>
+
+
       {/*  
       
-      
-    
-    
     
     */}
 
