@@ -1,6 +1,13 @@
-.videoPlayer{
-
-    
+.videoPlayer {
+   //code make the videoplayer 16x9
     width: 100%;
-    height: auto;
-}
+    height: calc(100vw * 9 / 16);
+    position: relative;
+
+
+    background-color: #000000; // set background color if video doesn't fill the width
+    // max-height: 56.25%;
+    overflow: hidden;
+    
+  }
+  

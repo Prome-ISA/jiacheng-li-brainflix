@@ -18,12 +18,12 @@ const UploadPage = () => {
     const thumbnail = formData.get('thumbnail');
 
     try {
-      // Upload video data to your API
+      // Upload video data to API
       const response = await fetch('http://localhost:8080/videos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Add any additional headers as needed
+          
         },
         body: JSON.stringify({ title, description, thumbnail }),
       });
